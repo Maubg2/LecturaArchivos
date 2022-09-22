@@ -47,5 +47,29 @@ public class VistaPrincipal extends JFrame{
 		getContentPane().add(datos);
 		
 	}
+
+	public PIzquierda getIzquierda() {
+		return izquierda;
+	}
+
+	public void setIzquierda(PIzquierda izquierda) {
+		this.izquierda = izquierda;
+	}
+
+	public PDerecha getDerecha() {
+		return derecha;
+	}
+
+	public void setDerecha(PDerecha derecha) {
+		this.derecha = derecha;
+	}
+
+	public PDatos getDatos() {
+		return datos;
+	}
+
+	public void setDatos(PDatos datos) {
+		this.datos = datos;
+	}
 	
 }

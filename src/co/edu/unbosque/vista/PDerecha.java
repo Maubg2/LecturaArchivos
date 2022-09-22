@@ -3,11 +3,13 @@ package co.edu.unbosque.vista;
 import java.awt.Color;
 
 import javax.swing.JPanel;
+import javax.swing.JScrollPane;
 import javax.swing.JTextArea;
 
 public class PDerecha extends JPanel{
 	
 	private JTextArea campoTexto;
+	private JScrollPane campoScroll; //El Scroll del TextArea
 	
 	public PDerecha() {
 		
@@ -23,7 +25,13 @@ public class PDerecha extends JPanel{
 		
 		campoTexto = new JTextArea();
 		campoTexto.setBounds(14, 70, 360, 380);
-		add(campoTexto);
+		campoTexto.setLineWrap(true);
+		
+		campoScroll = new JScrollPane(campoTexto);
+		campoScroll.setVerticalScrollBarPolicy(JScrollPane.VERTICAL_SCROLLBAR_AS_NEEDED); //Mostrar el Scroll cuando se necesite (vertical)
+		campoScroll.setHorizontalScrollBarPolicy(JScrollPane.HORIZONTAL_SCROLLBAR_AS_NEEDED); //Mostrar el Scroll cuando se necesite (horizontal)
+		campoScroll.setBounds(14, 70, 360, 380);
+		add(campoScroll); //Añadimos el Scroll porque dentro está el TextArea
 		
 	}
 
@@ -31,8 +39,8 @@ public class PDerecha extends JPanel{
 		return campoTexto;
 	}
 
-	public void setCampoTexto(JTextArea campoTexto) {
-		this.campoTexto = campoTexto;
+	public void setCampoTexto(String campoTexto) {
+		this.campoTexto.setText(campoTexto);
 	}
 
 }

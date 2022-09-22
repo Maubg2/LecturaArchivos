@@ -48,4 +48,20 @@ public class PDatos extends JPanel{
 		
 	}
 
+	public JLabel getContador() {
+		return contador;
+	}
+
+	public void setContador(JLabel contador) {
+		this.contador = contador;
+	}
+
+	public JLabel getArchivo() {
+		return archivo;
+	}
+
+	public void setArchivo(JLabel archivo) {
+		this.archivo = archivo;
+	}
+
 }

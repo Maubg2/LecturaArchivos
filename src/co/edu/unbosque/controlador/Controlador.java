@@ -19,7 +19,7 @@ public class Controlador implements ActionListener{
 		EA = new EjercicioArchivo();
 		VP.getDerecha().setCampoTexto(EA.readFile()); //Setear el texto del TextArea con la lectura del archivo
 		checked = EA.checkLoaded();
-		System.out.println(checked); //Debug
+		//System.out.println(checked); //Debug
 		if(checked) {
 			VP.getDatos().getArchivo().setText("Cargado");
 		}
@@ -43,6 +43,7 @@ public class Controlador implements ActionListener{
 			else {
 				EA.loadFile(src);
 				checked = EA.checkLoaded();
+				System.out.println(checked); //Debug
 				if(checked == false) {
 					System.out.println("Archivo no cargado"); //Debug
 				}

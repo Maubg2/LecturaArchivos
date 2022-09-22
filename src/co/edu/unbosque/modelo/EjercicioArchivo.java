@@ -33,7 +33,13 @@ public class EjercicioArchivo {
 	}
 	
 	public boolean checkLoaded() {
-		return (loaded) ? true: false;
+		System.out.println("Archivo: " + f); //Debug
+		if(f.exists()) {
+			return true;
+		}
+		else {
+			return false;
+		}
 	}
 	
 	public String readFile() {

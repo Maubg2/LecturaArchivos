@@ -16,6 +16,7 @@ public class EjercicioArchivo {
 	public EjercicioArchivo() {
 		f = new File("data/datos.txt"); //Ingresar archivo por defecto
 		loaded = true;
+		
 	}
 	public EjercicioArchivo(String src) {
 		this.src = src;

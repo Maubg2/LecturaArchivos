@@ -26,6 +26,7 @@ public class PDerecha extends JPanel{
 		campoTexto = new JTextArea();
 		campoTexto.setBounds(14, 70, 360, 380);
 		campoTexto.setLineWrap(true);
+		campoTexto.setEditable(false);
 		
 		campoScroll = new JScrollPane(campoTexto);
 		campoScroll.setVerticalScrollBarPolicy(JScrollPane.VERTICAL_SCROLLBAR_AS_NEEDED); //Mostrar el Scroll cuando se necesite (vertical)
@@ -35,8 +36,8 @@ public class PDerecha extends JPanel{
 		
 	}
 
-	public JTextArea getCampoTexto() {
-		return campoTexto;
+	public String getCampoTexto() {
+		return campoTexto.getText();
 	}
 
 	public void setCampoTexto(String campoTexto) {

@@ -52,8 +52,8 @@ public class PDatos extends JPanel{
 		return contador;
 	}
 
-	public void setContador(JLabel contador) {
-		this.contador = contador;
+	public void setContador(String contador) {
+		this.contador.setText(contador);
 	}
 
 	public JLabel getArchivo() {
